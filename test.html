@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>{user}</title>
+  
+  <meta charset="utf-8" />
+  <meta name="Generator" content="EditPlus">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" type="text/css" href="less.css" media="all">
+    <script type="text/javascript" src="less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="ajaxupload.js"></script>
+      <script type="text/javascript" src="jquery.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+           <script type="text/javascript">
+ function isEmail(){
+         var temp = document.getElementById("email");
+         //对电子邮件的验证
+           var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+          if(!myreg.test(temp.value))
+           {
+                alert('提示\n\n请输入有效的E_mail！');
+              myreg.focus();
+               return false;
+          }else{
+          alert();
+}
+}
+    </script>
+</head>
+<a class="btn" data-toggle="modal" href="#myModal"  data-keyboard="false" data-backdrop="false" >点击"无ESC关闭，无遮蔽背景"演示</a>
+<div class="modal" id="myModal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>对话框标题</h3>
+  </div>
+  <div class="modal-body">
+    <p>对话框内容</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn">关闭</a>
+    <a href="#" class="btn btn-primary">保存更新</a>
+           &nbsp;&nbsp;&nbsp;email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="email" name='email' type='text' class='span2' placeholder='email'/><br/>      
+       &nbsp;&nbsp;<input type='submit' class="btn" value="Signup" onclick="isEmail();"></input>
+  </div>
+</div>
